@@ -1,0 +1,67 @@
+@import 'base';
+
+.header_logo {
+  width: 13.3rem;
+  height: 5.7rem;
+}
+.top-image {
+  &__pc {
+    width: 64rem;
+  }
+  &__sp {
+    display: none;
+  }
+}
+.service-wrapper {
+  img {
+    width: 47.4rem;
+    height: 28rem;
+  }
+}
+.merit-wrapper {
+  img {
+    width: 39.2rem;
+    height: 17.6rem;
+  }
+}
+.review-unit__avatar {
+  img {
+    width: 8rem;
+    height: 10rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .header_logo {
+    width: 6.4rem;
+    height: 2.6rem;
+  }
+  .top-image {
+    &__sp {
+      display: block;
+      width: 100%;
+    }
+    &__pc {
+      display: none;
+    }
+  }
+  .service-wrapper {
+    img {
+      width: 34.5rem;
+      height: 18.9rem;
+    }
+  }
+  .merit-wrapper {
+    img {
+      width: 34.5rem;
+      height: 17.5rem;
+    }
+  }
+  .review-unit__avatar {
+    img {
+      width: 6.5rem;
+      height: 8rem;
+      margin: 0;
+    }
+  }
+}

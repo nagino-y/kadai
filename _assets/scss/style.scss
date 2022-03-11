@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+@use './modules/reset';
+@use './modules/base';
 @use './modules/index';
-// @use './modules/reset';
-// @use './modules/out';
+@use './modules/out';

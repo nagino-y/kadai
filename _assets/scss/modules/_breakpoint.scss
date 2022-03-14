@@ -1,0 +1,16 @@
+// レスポンシブ対応
+//mapの登録
+$breakpoints: (
+  //スマホ用
+  "sp": "(max-width: 767px)",
+  // タブレット用
+  "tab": "(min-width: 768px)",
+  // PC用
+  "pc": "(min-width: 1200px)"
+);
+//mixinの定義
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

@@ -772,4 +772,42 @@ body {
     height: 8rem;
     margin: 0;
   }
+}
+.second-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12rem;
+}
+.second-section h2 {
+  font-size: 2.4rem;
+  font-weight: normal;
+  background: linear-gradient(transparent 70%, rgba(25, 115, 200, 0.5) 0%);
+  margin: 0;
+}
+.second-section p {
+  font-size: 1.5rem;
+  margin: 2rem 0 2rem 0;
+}
+.second-section p:first-of-type {
+  margin-top: 9rem;
+}
+.second-section hr {
+  width: 57.2rem;
+  border: none;
+  border-bottom: solid 1px #1976d2;
+  margin: 0;
+}
+.second-section h1 {
+  width: 100vw;
+  height: 23.2rem;
+  font-size: 4.8rem;
+  line-height: 6.4rem;
+  font-weight: normal;
+  margin-top: 11.3rem;
+  margin-bottom: 0;
+  background: linear-gradient(to right, #62B5FE, #DEEEFC);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

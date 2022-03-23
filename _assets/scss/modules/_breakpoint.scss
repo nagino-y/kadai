@@ -2,15 +2,25 @@
 //mapの登録
 $breakpoints: (
   //スマホ用
-  "sp": "(max-width: 767px)",
-  // タブレット用
-  "tab": "(min-width: 768px)",
+  "sp": "(max-width: 600px)",
   // PC用
   "pc": "(min-width: 1200px)"
 );
 //mixinの定義
 @mixin mq($breakpoint: sp) {
   @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+$pc: 1200px; //PC
+$sp: 600x; //sp
+@mixin pc {
+  @media (max-width:($pc)){
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width:($sp)){
     @content;
   }
 }

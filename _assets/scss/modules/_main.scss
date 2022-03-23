@@ -1,6 +1,19 @@
 @charset "UTF-8";
 @import 'base';
 
+$tab: 770px; //tab
+$sp: 600x; //sp
+@mixin pc {
+  @media (min-width:($sp + 1) and max-width:($tab)){
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width:($sp)){
+    @content;
+  }
+}
+
 // 追従ボタン
 
 .follow-btn {
@@ -34,6 +47,9 @@
       background-color: rgba(255, 255, 255);
       z-index: -1;
     }
+  }
+  @include sp{
+    display: none;
   }
 }
 .fade-in {
@@ -105,9 +121,9 @@
 @media screen and (max-width: 600px) {
   // 追従ボタン
 
-  .follow-btn {
-    display: none;
-  }
+  // .follow-btn {
+ 
+  // }
 
   // トップページ
 

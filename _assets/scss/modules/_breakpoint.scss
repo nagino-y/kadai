@@ -1,17 +1,4 @@
 // レスポンシブ対応
-//mapの登録
-$breakpoints: (
-  //スマホ用
-  "sp": "(max-width: 600px)",
-  // PC用
-  "pc": "(min-width: 1200px)"
-);
-//mixinの定義
-@mixin mq($breakpoint: sp) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
 $pc: 1200px; //PC
 $sp: 600x; //sp
 @mixin pc {
@@ -24,3 +11,30 @@ $sp: 600x; //sp
     @content;
   }
 }
+
+$pc-down: 1199px;
+$sp-up: 601px;
+@mixin pc-down {
+  @media (max-width:($pc-down)){
+    @content;
+  }
+};
+@mixin sp-up {
+  @media (max-width:($sp-up)){
+    @content;
+  }
+};
+
+//mapの登録
+// $breakpoints: (
+//   //スマホ用
+//   "sp": "(max-width: 600px)",
+//   // PC用
+//   "pc": "(min-width: 1200px)"
+// );
+// //mixinの定義
+// @mixin mq($breakpoint: sp) {
+//   @media #{map-get($breakpoints, $breakpoint)} {
+//     @content;
+//   }
+// }

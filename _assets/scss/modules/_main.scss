@@ -1,18 +1,6 @@
 @charset "UTF-8";
-@import 'base';
-
-$tab: 770px; //tab
-$sp: 600x; //sp
-@mixin pc {
-  @media (min-width:($sp + 1) and max-width:($tab)){
-    @content;
-  }
-}
-@mixin sp {
-  @media (max-width:($sp)){
-    @content;
-  }
-}
+@import './base';
+@import './breakpoint';
 
 // 追従ボタン
 
@@ -70,24 +58,43 @@ $sp: 600x; //sp
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  @include sp{
+    flex-direction: column-reverse;
+  }
 }
 .top-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  @include sp{
+    padding-top: 3.5rem;
+    padding-left: 0;
+    width: 37.5rem;
+    align-items: center;
+  }
   h2 {
     font-size: 3.2rem;
     margin-bottom: 1.6rem;
     margin-top: 0;
     font-weight: normal;
+    @include sp{
+      font-size: 2.1rem;
+      margin-bottom: 2.1rem;
+    }
   }
   h1 {
     font-size: 4rem;
     margin-bottom: 2.7rem;
     font-weight: normal;
     line-height: 5.6rem;
+    @include sp {
+      font-size: 2.5rem;
+      line-height: 3.9rem;
+      margin-bottom: 1.8rem;
+      text-align: center;
     }
+  }
   &__btn {
     width: 48rem;
     height: 11.2rem;
@@ -101,6 +108,13 @@ $sp: 600x; //sp
     display: flex;
     align-items: center;
     justify-content: center;
+    @include sp{
+      width: 34.5rem;
+      height: 5.3rem;
+      font-size: 1.9rem;
+      border-radius: 1.4rem;
+      margin-bottom: 1.7rem;
+    }
     &:hover {
       top: -0.4rem;
       box-shadow: 0 0.8rem 0.5rem 0 rgba(0, 0, 0, 0.5);
@@ -115,53 +129,20 @@ $sp: 600x; //sp
     font-size: 1.6rem;
     line-height: 3.2rem;
     margin: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  // 追従ボタン
-
-  // .follow-btn {
- 
-  // }
-
-  // トップページ
-
-  .top-section {
-    flex-direction: column-reverse;
-  }
-  .top-wrapper {
-    padding-top: 3.5rem;
-    padding-left: 0;
-    width: 37.5rem;
-    align-items: center;
-    h2 {
-      font-size: 2.1rem;
-      margin-bottom: 2.1rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      line-height: 3.9rem;
-      margin-bottom: 1.8rem;
-      text-align: center;
-    }
-    &__btn {
-      width: 34.5rem;
-      height: 5.3rem;
-      font-size: 1.9rem;
-      border-radius: 1.4rem;
-      margin-bottom: 1.7rem;
-    }
-    p {
+    @include sp{
       font-size: 1rem;
       line-height: 1.4rem;
     }
   }
 }
-
+// ヘッダー
 .header_logo {
   width: 13.3rem;
   height: 5.7rem;
+  @include sp{
+    width: 6.4rem;
+    height: 2.6rem;
+  }
 }
 .top-image {
   &__pc {
@@ -192,8 +173,7 @@ $sp: 600x; //sp
 
 @media screen and (max-width: 600px) {
   .header_logo {
-    width: 6.4rem;
-    height: 2.6rem;
+ 
   }
   .top-image {
     &__sp {

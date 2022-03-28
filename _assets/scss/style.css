@@ -638,6 +638,8 @@ body {
 }
 @media (max-width: 600x) {
   .top-section {
+    display: flex;
+    justify-content: space-between;
     flex-direction: column-reverse;
   }
 }
@@ -653,7 +655,6 @@ body {
     padding-top: 3.5rem;
     padding-left: 0;
     width: 37.5rem;
-    align-items: center;
   }
 }
 .top-wrapper h2 {
@@ -726,64 +727,58 @@ body {
   }
 }
 
-.header_logo {
-  width: 13.3rem;
-  height: 5.7rem;
-}
-@media (max-width: 600x) {
-  .header_logo {
-    width: 6.4rem;
-    height: 2.6rem;
-  }
-}
-
 .top-image__pc {
   width: 64rem;
 }
+@media (max-width: 600x) {
+  .top-image__pc {
+    display: none;
+  }
+}
 .top-image__sp {
   display: none;
+}
+@media (max-width: 600x) {
+  .top-image__sp {
+    display: block;
+    width: 100%;
+  }
 }
 
 .service-wrapper img {
   width: 47.4rem;
   height: 28rem;
 }
+@media (max-width: 600x) {
+  .service-wrapper img {
+    width: 34.5rem;
+    height: 18.9rem;
+  }
+}
 
 .merit-wrapper img {
   width: 39.2rem;
   height: 17.6rem;
+}
+@media (max-width: 600x) {
+  .merit-wrapper img {
+    width: 34.5rem;
+    height: 17.5rem;
+  }
 }
 
 .review-unit__avatar img {
   width: 8rem;
   height: 10rem;
 }
-
-@media screen and (max-width: 600px) {
-  .top-image__sp {
-    display: block;
-    width: 100%;
-  }
-  .top-image__pc {
-    display: none;
-  }
-
-  .service-wrapper img {
-    width: 34.5rem;
-    height: 18.9rem;
-  }
-
-  .merit-wrapper img {
-    width: 34.5rem;
-    height: 17.5rem;
-  }
-
+@media (max-width: 600x) {
   .review-unit__avatar img {
     width: 6.5rem;
     height: 8rem;
     margin: 0;
   }
 }
+
 .second-section {
   display: flex;
   flex-direction: column;

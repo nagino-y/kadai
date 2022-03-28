@@ -1,21 +1,15 @@
 // レスポンシブ対応
 $pc: 1200px; //PC
+$tab: 770px;
+$sp-up: 601px;
 $sp: 600x; //sp
 @mixin pc {
   @media (max-width:($pc)){
     @content;
   }
 }
-@mixin sp {
-  @media (max-width:($sp)){
-    @content;
-  }
-}
-
-$pc-down: 1199px;
-$sp-up: 601px;
-@mixin pc-down {
-  @media (max-width:($pc-down)){
+@mixin tab {
+  @media (max-width:($tab)){
     @content;
   }
 };
@@ -24,6 +18,15 @@ $sp-up: 601px;
     @content;
   }
 };
+@mixin sp {
+  @media (max-width:($sp)){
+    @content;
+  }
+}
+
+
+
+
 
 //mapの登録
 // $breakpoints: (
